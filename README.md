@@ -121,12 +121,12 @@ Heptamer Island Transition A : DOF 189
 
 | File | Description |
 |------|-------------|
-| `finaldata.txt` | All sampled atomic configurations |
-| `finalvalues.txt` | Corresponding energies and forces |
+| `finaldata.txt` | All sampled atomic configurations in exploration-exploitation loop |
+| `finalvalues.txt` | Corresponding energies and forces in exploration-exploitation loop |
 | `array_out.mat` | Iteration-level log (convergence metrics, MEP paths, predicted energies) |
-| `ts_data_final.mat` | Transition state optimization history (coordinates, gradients, MEP) |
-| `maxforce_gpr.txt` | Maximum NEB force per optimizer step |
-| `normforce_gpr.txt` | NEB force norm per optimizer step |
+| `ts_data_final.mat` | Renunciation phase output (coordinates, gradients, MEP) |
+| `maxforce_gpr.txt` | Maximum NEB force per optimizer step for NEB on model surface |
+| `normforce_gpr.txt` | NEB force norm per optimizer step for NEB on model surface |
 | `conf*/` | Individual configuration directories with POSCAR files and calculator outputs |
 
 ## Key Algorithmic Details
