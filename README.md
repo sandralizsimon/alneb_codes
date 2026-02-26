@@ -65,7 +65,7 @@ Performs precise transition state optimization using Climbing Image NEB (CI-NEB)
 | `improved_tan.m` | Improved tangent estimation for NEB images |
 | `spring_parallel.m` | Parallel component of spring forces between NEB images |
 
-### Sampling and Analysis
+### Sampling
 | File | Description |
 |------|-------------|
 | `get_max_covariance.m` | Selects the next training point based on maximum GPR uncertainty |
