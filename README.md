@@ -134,7 +134,3 @@ Performs precise transition state optimization using Climbing Image NEB (CI-NEB)
 - **NEB Optimizer**: Adaptive Accelerated Relaxation Engine (AARE) combines Conjugate Gradient direction scheme (Fletcher-Reeves / Hestenes-Stiefel) with MD and adaptively accelerates based on the angle between successive gradients.
 - **Active Learning**: New training points are selected either by maximum predicted covariance (uncertainty sampling) during exploration, or by maximum predicted energy (exploitation sampling) near convergence.
 - **Convergence**: The MEP is considered converged when the maximum atomic displacement between successive iterations falls below `dmax_limit`. The transition state is converged when the maximum force component drops below 0.02 eV/A.
-
-## License
-
-Please add an appropriate license for your project.
