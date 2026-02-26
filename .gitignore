@@ -1,0 +1,12 @@
+# MATLAB auto-save files (created when MATLAB crashes or auto-saves)
+*.asv
+
+# Backup files (created when you edit a file)
+*.m~
+
+# Compiled MEX files (platform-specific compiled code, not needed by others)
+*.mex*
+
+# OS junk files (created by Windows/Mac, not part of your project)
+.DS_Store
+Thumbs.db
