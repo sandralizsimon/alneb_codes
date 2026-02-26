@@ -58,7 +58,7 @@ Performs precise transition state optimization using Climbing Image NEB (CI-NEB)
 ### NEB Module
 | File | Description |
 |------|-------------|
-| `GPR_neb_opt_pinv.m` | NEB optimization on the GPR surrogate surface using an AARE-CG optimizer |
+| `GPR_neb_opt_pinv.m` | NEB optimization on the GPR surrogate surface using an AARE optimizer |
 | `GPR_ci_neb_opt_pinv.m` | Climbing Image NEB optimization on the GPR surrogate surface |
 | `neb_force.m` | Standard NEB force projection (perpendicular true force + parallel spring force) |
 | `cineb_force.m` | Climbing Image NEB force projection |
@@ -102,6 +102,7 @@ Performs precise transition state optimization using Climbing Image NEB (CI-NEB)
 2. Configure system-specific parameters in `exploration.m`:
    - EMT potential parameters (`De`, `a`, `re`, `rc`) or replace `find_forces_emt.m` with your own energy/force calculator
    - GPR hyperparameter bounds and initial values
+   - Dimensionality of the system (`dimension`)
    - Convergence thresholds (`dmax_limit`, `rmax_limit`, `dmin_limit`)
    - Number of NEB images (set in `interpolate.m`, default: 7)
 
@@ -130,7 +131,7 @@ Performs precise transition state optimization using Climbing Image NEB (CI-NEB)
 ## Key Algorithmic Details
 
 - **GPR Kernel**: Extended RBF kernel that jointly models energies and forces with their cross-covariances, enabling learning from both energy and gradient observations.
-- **NEB Optimizer**: Angle-based Accelerated Relaxation Engine (AARE) combined with a Conjugate Gradient direction scheme (Fletcher-Reeves / Hestenes-Stiefel), selected dynamically based on the angle between successive gradients.
+- **NEB Optimizer**: Adaptive Accelerated Relaxation Engine (AARE) combines Conjugate Gradient direction scheme (Fletcher-Reeves / Hestenes-Stiefel) with MD and adaptively accelerates based on the angle between successive gradients.
 - **Active Learning**: New training points are selected either by maximum predicted covariance (uncertainty sampling) during exploration, or by maximum predicted energy (exploitation sampling) near convergence.
 - **Convergence**: The MEP is considered converged when the maximum atomic displacement between successive iterations falls below `dmax_limit`. The transition state is converged when the maximum force component drops below 0.02 eV/A.
 
