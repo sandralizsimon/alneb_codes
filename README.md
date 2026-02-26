@@ -90,6 +90,7 @@ Performs precise transition state optimization using Climbing Image NEB (CI-NEB)
 | `fix_atoms.m` | Returns the indices of atoms held fixed during NEB |
 
 ### Input Files
+Heptamer Island Transition A : DOF 189
 | File | Description |
 |------|-------------|
 | `POSCAR_initial.1` | Reactant (initial state) geometry in VASP POSCAR format |
