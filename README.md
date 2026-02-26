@@ -4,7 +4,7 @@ A MATLAB implementation of the Active Learning Nudged Elastic Band (ALNEB) metho
 
 ## Method Overview
 
-ALNEB operates in three sequential phases:
+ALNEB operates in three phases:
 
 ### Phase 1: Exploration
 Builds an initial GPR surrogate of the potential energy surface by iteratively:
